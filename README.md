@@ -10,10 +10,12 @@ ROS sample programs for the KAWADA HIRO-NX
 ## Installation
 
 1. Connect an ethernet cable between the controller and your PC  
-<img src=img/lan_port.jpg width=280>
+
+  <img src=img/lan_port.jpg width=280>
 
 2. Set network configuration as below  
-<img src=img/hironx_network.png width=280>
+
+  <img src=img/hironx_network.png width=280>
 
 3. Register the IP address of the HIRO-NX in /etc/hosts  
    `10.254.12.1 hiro012`
@@ -26,7 +28,7 @@ ROS sample programs for the KAWADA HIRO-NX
    - When two of them blink only in green and white, the robot is ready to be controlled  
    - If the red LED is turned on, the emergency stop button may have been pressed
   
-<img src=img/power_button.jpg width=290>  <img src=img/front.jpg width=300>
+   <img src=img/power_button.jpg width=290>  <img src=img/front.jpg width=300>
 
 2. Caribrate and initialize all joints (select from the following two options)  
    - GUI    
@@ -35,7 +37,7 @@ ROS sample programs for the KAWADA HIRO-NX
      - Wait for the robot to finish moving  
      - Push `Goto init pose` button  
 
-<img src=img/gui.jpg width=240>
+   <img src=img/gui.png width=280>
 
    - CUI  
      - ``$ ipython -i `rospack find hironx_ros_bridge`/scripts/hironx.py --host hiro012 ``  
@@ -43,28 +45,28 @@ ROS sample programs for the KAWADA HIRO-NX
      - Wait for the robot to finish moving  
      - `robot.goInitial()`
 
-<img src=img/calibrate_comp.gif width=240>  <img src=img/initialize_comp.gif width=240>
+   <img src=img/calibrate_comp.gif width=240>  <img src=img/initialize_comp.gif width=240>
 
 3. Open rviz and moveit    
    - `$ roslaunch hironx_moveit_config moveit_planning_execution.launch`  
    - When the rviz screen comes up, the preparation has been completed  
 
-<img src=img/rviz.gif width=280>
+   <img src=img/rviz.gif width=280>
 
-1. Execute demonstrations
+4. Execute demonstrations
    - `$ roslaunch hironx_stack head_banging.launch`
    - `$ roslaunch hironx_stack turn_waist.launch`
    - `$ roslaunch hironx_stack move_arms.launch`
 
-<img src=img/head_comp.gif width=240>  <img src=img/waist_comp.gif width=240> <img src=img/arms_comp.gif width=240>
+   <img src=img/head_comp.gif width=240>  <img src=img/waist_comp.gif width=240> <img src=img/arms_comp.gif width=240>
 
-1. Shutdown the robot   
+5. Shutdown the robot   
    - GUI  
      - Push `Goto power-off pose` button   
    - CUI
      - `robot.goOffPose()`  
 
-<img src=img/off_comp.gif width=240>
+   <img src=img/off_comp.gif width=240>
 
 ## References
 
