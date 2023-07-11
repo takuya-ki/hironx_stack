@@ -8,8 +8,8 @@ ROS sample programs for the KAWADA HIRO-NX
 
 ## Requirement
 
-- Ubuntu 16.04  
-- ROS Kinetic
+- Ubuntu 16.04 PC  
+  - [ROS Kinetic](https://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 ## Installation
 
